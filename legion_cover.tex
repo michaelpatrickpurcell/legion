@@ -1,0 +1,28 @@
+\documentclass[a5paper]{article}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\usepackage{eso-pic}
+
+\usepackage{fontspec}
+\setmainfont[Scale=3.0]{Cinzel-medium}
+
+\begin{document}
+\thispagestyle{empty}
+\begin{tikzpicture}[remember picture, overlay]
+	\node () at (current page.center) {\includegraphics[width=\pagewidth, height=\pageheight]{~/Desktop/legion_cover.png}};
+	
+	\path (current page.center) --++ (0, 8.625cm) node {\textcolor{white}{\Huge LEGION}};
+	\path (current page.center) --++ (0, -8.0cm) node {\textcolor{white}{A Paragon Playset}};
+	\path (current page.center) --++ (0, -9.25cm) node {\textcolor{white}{by Michael Purcell}};
+
+
+\end{tikzpicture}
+
+%\AddToShipoutPictureBG{
+%\begin{tikzpicture}[remember picture, overlay]
+%	\node () at (current page.center) {\includegraphics[width=\pagewidth, height=\pageheight]{~/Desktop/legion_cover.png}};
+%\end{tikzpicture}
+%}
+%\phantom{a}
+\end{document}
